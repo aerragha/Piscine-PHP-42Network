@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Day of the 42</title>
+    <link rel="stylesheet" type="text/css" href="scumm.css">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="container">
+        <div class="header">
+            <img id="logo" src="resources/day_of_the_42.png">
+            <img id="search" src="resources/loupe.png">
+            <a href="" title="Recommencer au début"><img id="reload" src="resources/reload.png"></a>
+            <img id="close" title="Déconnecter" src="resources/close.gif" onclick="close_win()">
+        </div>
+        <div id="decription">
+            <div id="left_div">
+                <img id="Avancer" title="Avancer" src="resources/arrow.png">
+                <img id="hand" title="Prendre" src="resources/main.png">
+                <a href="https://1337.ma" target="_blank"><img title="Regarder" id="oeil" src="resources/oeil.png"></a>
+                <a href="https://profile.intra.42.fr/users/aerragha"><img title="Utiliser" src="resources/outil.png"></a>
+                <img id="parler" title="Parler" src="resources/chat-icon.png">
+            </div>
+            <div id="center_div">
+                <img id="cluster" title="Cluster" src="resources/cluster.jpg" usemap="#planetmap">
+            </div>
+            <div id="right_div">
+                <a href="https://www.alibris.com/" target="_blank"><img id="img1" title="Book" src="resources/book.png"></a>
+                <a href="https://www.alibaba.com/premium/car_cleaning_towel.html" target="_blank"><img id="img2" title="towel" src="resources/towel.png"></a>
+                <a href="https://www.crazygames.com/game/ultimate-mario-run" target="_blank"><div id="brick" title="brick"></div></a>
+            </div>
+            <map name="planetmap">
+                <area shape="rect" coords="845, 335, 1045, 490" href="https://www.Apple.com/">
+                <area shape="rect" coords="345, 345, 495, 580" href="https://www.ikea.com/">
+            </map>
+            <div id="obj">
+                <p class="p1">Vous <span class="span1">entrez</span> alors dans une grande piece remplie d'<span class="span2">ordinateurs</span>...</p>
+                <p class="p_italic" id="reponse"><i>- Bonjour, vous êtes nouveau ici ?</i></p>
+                <form id="form">
+                    <input type="text" size="62" required>
+                    <input type="submit" id="submit" value="Repondre">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

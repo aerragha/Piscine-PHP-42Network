@@ -1,0 +1,177 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background-color: #505050;
+}
+
+.header
+{
+	margin-left: 100px;
+	height: 150px;
+	width: 1450px;
+	background-color: #909090;
+	margin-top: 30px;
+	border-radius: 15px;
+	box-shadow: 8px 11px 8px 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo
+{
+	width: 470px;
+	float: left;
+	margin-top: 15px;
+}
+
+#reload
+{
+	width: 25px;
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+#close
+{
+	width: 25px;
+	float: right;
+	margin-right: -25px;
+	margin-top: 115px;
+}
+
+#search
+{
+	position: relative;
+	left: 44%;
+	top: 5px;
+	width: 300px;
+}
+
+#decription
+{
+	width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#left_div
+{
+	float: left;
+	height: 450px;
+	width: 135px;
+	background-color: #909090;
+	margin-top: 25px;
+	border-radius: 15px;
+	box-shadow: 8px 11px 8px 0px;
+	margin-left: 10px;
+}
+
+#right_div
+{
+	float: right;
+	height: 450px;
+	width: 135px;
+	background-color: #909090;
+	margin-top: 25px;
+	border-radius: 15px;
+	box-shadow: 8px 11px 8px 0px;
+	margin-right: -10px;
+
+}
+
+#center_div
+{
+	float: left;
+	height: 625px;
+	width: 1090px;
+	background-color: #909090;
+	margin-top: 25px;
+	border-radius: 15px;
+	box-shadow: 8px 11px 8px 0px;
+	margin-left: 20px;
+}
+ 
+ #cluster
+ {
+ 	width: 98%;
+ 	margin-top: 14px;
+ 	margin-left: 10px;
+ }
+
+#left_div img
+{
+	width: 70px;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+
+#oeil
+{
+	border: 5px solid red;
+	border-radius: 5px;
+}
+
+#img1 ,#img2
+{
+	width: 80px;
+	margin-left: 25px;
+	margin-top: 20px;
+}
+
+#brick
+{
+	background: repeat url('resources/brick.jpg');
+	width: 110px;
+	height: 70px;
+	margin-left: 12px;
+	margin-top: 20px;
+}
+
+#obj
+{
+	width: 510px;
+	height: 170px;
+	background-color: #88FF89;
+	position: absolute;
+	top: 750px;
+	border-radius: 15px;
+	box-shadow: 8px 11px 8px 0px;
+}
+
+p
+{
+	font-family: arial;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.span1
+{
+	font-family: auto;
+	font-size: 37px;
+}
+
+.span2
+{
+	text-shadow: 7px 7px 5px red;
+}
+
+.p_italic
+{
+	margin-top: -15px;
+}
+
+form
+{
+	margin-top: -15px;
+	margin-left: 10px;
+}
+
+button
+{
+	height: 21px;
+	width: 80px;
+}
