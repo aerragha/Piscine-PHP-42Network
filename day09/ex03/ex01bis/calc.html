@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+        }
+        #Container
+        {
+            display: flex;
+            justify-content: center;
+        }
+        input, select
+        {
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="Container">
+            <input type="text" name="left" id="left">
+            <select name="op" id="op">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" name="right" id="right">
+            <input type="submit" id="btn" value="Try me!">
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script> 
+            function display(str)
+            {
+                console.log(str);
+                alert(str);
+            }
+            function useme()
+            {
+                alert('Please, use me...');  
+            }
+            left = $("#left");
+            right = $("#right");
+            op = $("#op");
+            btn = $("#btn");
+            setInterval(useme, 30000);
+            btn.click(function(){
+                var res = 0;
+                var str = "";
+                left_n = Number(left.val());
+                right_n = Number(right.val());
+                console.log(left_n);
+                console.log(right_n);
+                if (left_n < 0 || right_n < 0 || !left.val() || !right.val() || isNaN(left_n) || isNaN(right_n))
+                    return (display('Error :('));
+                if ((op.val() == '/' || op.val() == '%') && right_n === 0)
+                    return (display('It’s over 9000!'))
+                switch (op.val())
+                {
+                    case '+': res = left_n + right_n; break;
+                    case '-': res = left_n - right_n; break;
+                    case '*': res = left_n * right_n; break;
+                    case '/': res = left_n / right_n; break;
+                    case '%': res = left_n % right_n; break;
+                }
+                str = left.val() + " " + op.val() + " " + right.val() + " = " + res;
+                display(str); 
+            });
+        </script>
+    </body>
+</html>

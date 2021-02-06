@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+        }
+        #Container
+        {
+            display: flex;
+            justify-content: center;
+        }
+        input, select
+        {
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="Container">
+            <input type="text" name="left" id="left">
+            <select name="op" id="op">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" name="right" id="right">
+            <input type="submit" id="btn" value="Try me!">
+        </div>
+        <script> 
+            function display(str)
+            {
+                console.log(str);
+                alert(str);
+            }
+            function useme()
+            {
+                alert('Please, use me...');  
+            }
+            var left = document.getElementById("left");
+            var right = document.getElementById("right");
+            var op = document.getElementById("op");
+            var btn = document.getElementById("btn");
+            setInterval(useme, 30000);
+            btn.addEventListener('click', function(){
+                var res = 0;
+                var str = "";
+                left_n = Number(left.value);
+                right_n = Number(right.value);
+                console.log(left_n);
+                console.log(right_n);
+                if (left_n < 0 || right_n < 0 || !left.value || !right.value || isNaN(left_n) || isNaN(right_n))
+                    return (display('Error :('));
+                if ((op.value == '/' || op.value == '%') && right_n === 0)
+                    return (display('It’s over 9000!'))
+                switch (op.value)
+                {
+                    case '+': res = left_n + right_n; break;
+                    case '-': res = left_n - right_n; break;
+                    case '*': res = left_n * right_n; break;
+                    case '/': res = left_n / right_n; break;
+                    case '%': res = left_n % right_n; break;
+                }
+                str = left.value + " " + op.value + " " + right.value + " = " + res;
+                display(str); 
+            });
+        </script>
+    </body>
+</html>

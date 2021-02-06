@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .balloon
+        {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            background: red;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="balloon"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        i = 200;
+        j = -1;
+        color = ['green', 'blue', 'red'];
+        balloon = $(".balloon");
+        balloon.click(function() {
+            i = i + 10 <= 430 ? i + 10 : 200 ;
+            j = j + 1 < 3 ? j + 1 : 0;
+            balloon.css('width', i + 'px');
+            balloon.css('height', i + 'px');
+            balloon.css('background', color[j]);
+        });
+        balloon.mouseout(function() {
+            i = i - 5 > 200 ? i - 5 : 200;
+            j = j - 1 >= 0 ? j - 1 : 2;
+            balloon.css('width', i + 'px');
+            balloon.css('height', i + 'px');
+            balloon.css('background', color[j]);
+        });
+    </script>
+</body>
+</html>
